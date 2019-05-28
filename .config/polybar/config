@@ -1,0 +1,176 @@
+[colors]
+background = #222222
+background-alt = #AB4642
+foreground = #FFFFFF
+foreground-alt = #555555
+primary = #AB4642
+secondary = #FFFFFF
+alert = #BD2C40
+
+[bar/mybar]
+width = 100%
+height = 30
+radius = 0.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+;line-size = 3
+;line-color = #f00
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = "Noto Sans Mono:pixelsize=10;1"
+font-1 = "Font Awesome 5 Free Solid:style=Solid:size=10;1"
+
+; Modules ---------------
+
+modules-left = i3 xwindow
+modules-center = date
+modules-right = xkeyboard battery alsa
+
+; Conky -----------------
+
+;tray-position = right
+;tray-padding = 0
+;tray-transparent = true
+;tray-background = #AB4642
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+; -----------------------
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+;ws-icon-0 = 1;
+;ws-icon-1 = 2;
+;ws-icon-2 = 3;
+;ws-icon-3 = 4;
+;ws-icon-4 = 5;
+;ws-icon-5 = 6;6
+;ws-icon-6 = 7;7
+;ws-icon-7 = 8;8
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-background = ${colors.primary}
+label-focused-underline = ${colors.primary}
+label-focused-padding = 1
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-padding = 1
+
+; -----------------------
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+; -----------------------
+
+[module/date]
+type = internal/date
+interval = 1
+
+;date = 
+date-alt = "  %d/%m/%Y"
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+format-prefix =  
+label = %time% %date%
+
+; -----------------------
+
+[module/xkeyboard]
+type = internal/xkeyboard
+
+label-indicator-padding = 1
+label-indicator-background = ${colors.primary}
+label-indicator-underline = ${colors.primary}
+
+; -----------------------
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = ${colors.background}
+
+format-discharging = <animation-discharging> <label-discharging>
+format-discharging-underline = ${colors.background}
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-foreground = ${colors.foreground-alt}
+animation-discharging-framerate = 750
+
+; -----------------------
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <label-volume> <bar-volume>
+label-volume = 
+label-volume-foreground = ${root.foreground}
+
+format-muted-foreground = ${colors.foreground}
+label-muted = sound muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
