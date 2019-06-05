@@ -1,10 +1,8 @@
 #!/bin/sh
 #
-# ufetch-manjaro - tiny system info for manjaro
+# ufetch-manjaro
 
 ## INFO
-
-# user is already defined
 host="$(hostname)"
 os='Manjaro'
 kernel="$(uname -sr)"
@@ -28,8 +26,6 @@ else
 fi
 
 ## DEFINE COLORS
-
-# probably don't change these
 bold="$(tput bold)"
 black="$(tput setaf 0)"
 red="$(tput setaf 1)"
@@ -41,14 +37,13 @@ cyan="$(tput setaf 6)"
 white="$(tput setaf 7)"
 reset="$(tput sgr0)"
 
-# you can change these
+## SET COLORS
 lc="${reset}${bold}${red}"	# labels
 nc="${reset}${bold}${red}"	# user and hostname
 ic="${reset}${bold}${white}"	# info
-c0="${reset}${red}"			# first color
+c0="${reset}${red}"		# logo
 
 ## OUTPUT
-
 cat <<EOF
 
  ${c0}██████████  ████  ${nc}${USER}${ic}@${nc}${host}${reset}
