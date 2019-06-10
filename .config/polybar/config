@@ -26,7 +26,8 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = "Noto Sans Mono:pixelsize=10;1"
-font-1 = "Font Awesome 5 Free Solid:style=Solid:size=10;1"
+;font-1 = "Font Awesome 5 Free Solid:style=Solid:size=10;1"
+font-1 = "RobotoMono Nerd Font:pixelsize=12;1"
 
 ; Modules ---------------
 
@@ -94,12 +95,12 @@ type = internal/date
 interval = 1
 
 ;date = 
-date-alt = "  %d/%m/%Y"
+date-alt = "  %d/%m/%Y"
 
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix =  
+format-prefix =  
 label = %time% %date%
 
 ; -----------------------
@@ -152,7 +153,7 @@ animation-discharging-framerate = 750
 type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
-label-volume = 
+label-volume =  
 label-volume-foreground = ${root.foreground}
 
 format-muted-foreground = ${colors.foreground}
