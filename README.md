@@ -1,14 +1,14 @@
 # Dotfiles
 
-### O que é este repositório?
+### About this repository
 
-Este repositório guarda meus arquivos de configuração personalizados.
+This repository stores my customized configuration files.
 
-### Minha personalização
+### Personalization
 
-- **SO** - Linux Manjaro
-- **Tema** - Arc-Red-Darker
-- **Icones** - Papirus
-- **Fonte** - Noto Sans Mono
+- **OS** - Linux Manjaro
+- **Theme** - Arc-Red-Darker
+- **Icons** - Papirus
+- **Font** - Noto Sans Mono
 - **Terminal** - Urxvt
-- **Barra** - Polybar
+- **Bar** - Polybar
